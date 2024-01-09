@@ -53,9 +53,9 @@ public class AukUtilsPlugin implements FlutterPlugin, MethodCallHandler {
   @Override
   public void onMethodCall(@NonNull MethodCall call, @NonNull Result result) {
     if (call.method.equals("getPlatformVersion")) {
-      result.success("Android " + android.os.Build.VERSION.RELEASE);
+      result.success(android.os.Build.VERSION.RELEASE);
     } else if (call.method.equals("getMacAddress")) {
-      result.success("Android " + getWIFIMAC());
+      result.success(getWIFIMAC());
     } else {
       result.notImplemented();
     }
